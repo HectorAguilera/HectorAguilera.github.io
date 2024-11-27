@@ -1,0 +1,151 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'Source Code Pro', monospace;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+	src: url(activos/tipos/SourceCodePro-VariableFont_wght.ttf) format(ttf);
+}
+@font-face {
+	font-family: "Source Sans 3", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	src: url(activos/tipos/SourceSans3-VariableFont_wght.ttf) format(ttf);
+}
+
+html {
+	scroll-snap-type: y mandatory;
+}
+
+body,
+body * {
+    all: unset;
+}
+
+body {
+	background-color: #000000;
+	color: #ffffff;
+	font-family: "Source Sans 3", sans-serif;
+	font-size: 1.5rem;
+	line-height: 3rem;
+}
+
+address, article, nav {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+header {
+    animation: fade-in 1s ease-in 1s forwards;
+    opacity: 0;
+    padding: 2rem; 
+    position: fixed;
+}
+
+nav {
+	align-items: center;
+}
+
+nav, script {
+    display: none;
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+header a, h1, li {
+	animation: fade-in 1s ease-in forwards;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 2rem;
+	font-weight: 300;
+	opacity: 0;
+}
+
+li {
+	opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+}
+
+li:nth-child(1) {
+	animation-delay: .2s;
+}
+li:nth-child(2) {
+	animation-delay: .4s;
+}
+li:nth-child(3) {
+	animation-delay: .6s;
+}
+li:nth-child(4) {
+	animation-delay: .8s;
+}
+li:nth-child(5) {
+	animation-delay: 1s;
+}
+
+address a,
+article a {
+	animation: fade-in 1s ease-in 1s forwards;
+	opacity: 0;
+}
+
+iframe,
+p {
+	animation: fade-in 1s ease-in 1s forwards;
+	opacity: 0;
+}
+
+iframe {
+	border: 0;
+	flex: 1;
+}
+
+img {
+	width:50vw;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+em {
+	font-style: italic;
+}
+
+#audiovisual article {
+	scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    } 
+}
+
+@media (orientation: landscape) {
+	address, article, nav {
+		box-sizing: border-box;
+		height: 100vh;
+		justify-content: center;
+		padding: 25vh 25vw;
+	}
+    li {
+        transition: font-size .5s;
+    }
+    li:hover {
+        font-size: 2.5rem;
+    }
+}
+
+@media (orientation: portrait) {
+	
+}
